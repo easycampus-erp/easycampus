@@ -1,0 +1,135 @@
+# 6. Folder Structure
+
+## Full Product Monorepo Structure
+
+```text
+easycampus/
+  apps/
+    web/
+      src/
+        app/
+          (marketing)/
+            page.tsx
+            about/page.tsx
+            features/page.tsx
+            university-erp/page.tsx
+            mentor-management/page.tsx
+            student-management/page.tsx
+            attendance-system/page.tsx
+            analytics/page.tsx
+            pricing/page.tsx
+            blog/page.tsx
+            faq/page.tsx
+            contact/page.tsx
+            request-demo/page.tsx
+          (dashboard)/
+            admin/page.tsx
+            faculty/page.tsx
+            mentor/page.tsx
+            student/page.tsx
+          api/
+            auth/[...route]/route.ts
+        components/
+          marketing/
+          dashboard/
+          shared/
+        lib/
+          api/
+          auth/
+          utils/
+        styles/
+      public/
+    api/
+      src/
+        modules/
+          auth/
+          users/
+          institutions/
+          departments/
+          courses/
+          subjects/
+          students/
+          mentors/
+          faculty/
+          attendance/
+          exams/
+          marks/
+          announcements/
+          notifications/
+          analytics/
+          reports/
+        middleware/
+        config/
+        db/
+        app.ts
+        server.ts
+    mobile/
+      src/
+        screens/
+          Dashboard/
+          Attendance/
+          Marks/
+          Timetable/
+          Assignments/
+          Messages/
+          Notifications/
+        components/
+        services/
+        navigation/
+        hooks/
+        store/
+  packages/
+    ui/
+    config/
+    types/
+    eslint-config/
+  docs/
+  supabase/
+    schema.sql
+  infra/
+    docker/
+    nginx/
+    terraform/
+  .github/
+    workflows/
+  package.json
+  turbo.json
+  pnpm-workspace.yaml
+```
+
+## Current Repository Structure
+
+```text
+Easycampus/
+  assets/
+    styles.css
+    app.js
+  docs/
+    01-website-copy.md
+    02-page-structure.md
+    03-ui-wireframes.md
+    04-database-schema.md
+    05-api-endpoints.md
+    06-folder-structure.md
+    07-deployment-architecture.md
+    08-product-roadmap.md
+    09-system-architecture.md
+    10-vercel-supabase-deployment.md
+  supabase/
+    schema.sql
+  .env.example
+  index.html
+  about.html
+  features.html
+  university-erp.html
+  mentor-management.html
+  student-management.html
+  attendance-system.html
+  analytics.html
+  pricing.html
+  blog.html
+  faq.html
+  contact.html
+  request-demo.html
+  README.md
+```

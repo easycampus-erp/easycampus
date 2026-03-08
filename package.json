@@ -1,0 +1,18 @@
+{
+  "name": "easycampus",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.6.0",
+  "scripts": {
+    "dev": "corepack pnpm --parallel --filter @easycampus/web --filter @easycampus/mobile run dev",
+    "build": "corepack pnpm -r --if-present run build",
+    "lint": "corepack pnpm -r --if-present run lint",
+    "typecheck": "corepack pnpm -r --if-present run typecheck",
+    "dev:web": "corepack pnpm --filter @easycampus/web dev",
+    "dev:api": "corepack pnpm --filter @easycampus/api dev",
+    "dev:mobile": "corepack pnpm --filter @easycampus/mobile start"
+  },
+  "devDependencies": {
+    "typescript": "latest"
+  }
+}
