@@ -2,7 +2,7 @@
     "name":  "easycampus",
     "private":  true,
     "version":  "0.1.0",
-    "packageManager":  "pnpm@10.6.0",
+    "packageManager":  "pnpm@9.15.4",
     "scripts":  {
                     "dev":  "corepack pnpm --parallel --filter @easycampus/web --filter @easycampus/mobile run dev",
                     "build":  "corepack pnpm -r --if-present run build",
