@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { marketingNav } from "@easycampus/config";
+import { ProductMenu } from "@/components/marketing/product-menu";
 
 export function MarketingShell({ children }: { children: ReactNode }) {
   return (
@@ -18,6 +19,7 @@ export function MarketingShell({ children }: { children: ReactNode }) {
           </Link>
 
           <nav className="hidden items-center gap-6 text-sm font-medium text-mist lg:flex">
+            <ProductMenu />
             {marketingNav.map((item) => (
               <Link key={item.href} href={item.href} className="transition hover:text-ink">
                 {item.label}
@@ -26,6 +28,9 @@ export function MarketingShell({ children }: { children: ReactNode }) {
           </nav>
 
           <div className="flex flex-wrap gap-3">
+            <div className="lg:hidden">
+              <ProductMenu />
+            </div>
             <Link href="/features" className="rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-ink transition hover:border-brand/30 hover:text-brand">
               Explore Platform
             </Link>
