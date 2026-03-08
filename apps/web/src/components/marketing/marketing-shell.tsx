@@ -7,17 +7,20 @@ import { marketingNav } from "@easycampus/config";
 import { ProductMenu } from "@/components/marketing/product-menu";
 
 const serviceItems = [
-  "Online Registration",
-  "Student Information System",
-  "School Fee Management",
+  "Student Management",
+  "Department Management",
+  "Course Management",
+  "Subject Management",
+  "Mentor Management",
+  "Attendance System",
+  "Academic Management",
   "Exam & Result Management",
-  "Library Management",
-  "Staff Information Management",
-  "School Financial Accounting",
-  "Staff Payroll Management",
-  "Inventory Management",
-  "Bus Transport & GPS",
-  "Attendance Management"
+  "Faculty Workspace",
+  "Student Portal",
+  "Communication Hub",
+  "Analytics & Reports",
+  "TPO & Placement Operations",
+  "Mobile Student App"
 ];
 
 export function MarketingShell({ children }: { children: ReactNode }) {

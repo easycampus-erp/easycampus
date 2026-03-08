@@ -8,9 +8,9 @@ const plans = [
     price: "Rs. 0.5 / student / month",
     emphasis: false,
     features: [
-      "Student information system and online registration",
-      "Attendance management and announcements",
-      "Basic academic and department operations",
+      "Student management and academic structures",
+      "Attendance workflows and announcements",
+      "Core admin, faculty, and student dashboards",
       "Fast launch path for smaller colleges and institutes"
     ]
   },
@@ -22,7 +22,7 @@ const plans = [
     features: [
       "Everything in Lite plus mentor workflows",
       "Exam and result management",
-      "Role dashboards for admin, faculty, and students",
+      "Role dashboards for admin, faculty, mentor, and students",
       "Improved reporting and communication controls"
     ]
   },
@@ -33,8 +33,8 @@ const plans = [
     emphasis: true,
     features: [
       "Everything in Plus plus advanced analytics",
-      "Staff information, payroll, and inventory support",
-      "Library, fee management, and governance workflows",
+      "TPO and placement operations",
+      "Exports, scheduled reports, and governance workflows",
       "Operational controls for fast-scaling institutions"
     ]
   },
@@ -45,8 +45,8 @@ const plans = [
     emphasis: false,
     features: [
       "Enterprise rollout for large colleges and university groups",
-      "Transport, GPS, finance, and advanced administration layers",
-      "Multi-role reporting, exports, and process automation",
+      "Leadership visibility across departments and campuses",
+      "Multi-role reporting, automation, and governance layers",
       "Custom implementation and long-term scaling support"
     ]
   }
@@ -62,7 +62,7 @@ const commitments = [
 const pricingSignals = [
   { label: "Billing model", value: "Per student / month", helper: "Simple pricing aligned to active student capacity" },
   { label: "Ideal for", value: "Institutes to universities", helper: "Works for colleges, campuses, and education groups" },
-  { label: "Rollout style", value: "Module-led", helper: "Start with essentials and expand into full ERP operations" }
+  { label: "Rollout style", value: "Module-led", helper: "Start with essentials and expand into full university ERP operations" }
 ];
 
 export default function PricingPage() {

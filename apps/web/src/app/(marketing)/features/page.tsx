@@ -3,14 +3,24 @@ import { CtaBanner } from "@/components/marketing/cta-banner";
 
 const modules = [
   {
-    title: "Online registration and admissions",
-    body: "Collect registration data, manage intake workflows, and move new students into the ERP without manual re-entry.",
-    signals: ["Digital registration", "Admissions-ready forms", "Enrollment handoff"]
+    title: "Student lifecycle management",
+    body: "Manage enrollment, semester progression, guardian context, cohorts, and academic status from one institutional source of truth.",
+    signals: ["Admissions to graduation", "Unified student master", "Role-aware access"]
   },
   {
-    title: "Student information system",
-    body: "Manage lifecycle records, profiles, semesters, guardians, departments, batches, and academic status from one source of truth.",
-    signals: ["Admissions to graduation", "Unified student master", "Role-aware access"]
+    title: "Department management",
+    body: "Create and govern departments, assign academic ownership, and maintain clean institutional structure across every school or faculty.",
+    signals: ["Department hierarchy", "Academic ownership", "Admin visibility"]
+  },
+  {
+    title: "Course management",
+    body: "Configure programs, semesters, credits, batches, and course-level academic planning without fragmented spreadsheets.",
+    signals: ["Programs + batches", "Semester planning", "Credit structure"]
+  },
+  {
+    title: "Subject management",
+    body: "Control subject catalogs, mappings, allocations, and semester-wise academic design across departments and courses.",
+    signals: ["Subject catalogs", "Course mapping", "Allocation control"]
   },
   {
     title: "Mentor and intervention workflows",
@@ -24,43 +34,43 @@ const modules = [
   },
   {
     title: "Exams, marks, and results",
-    body: "Handle exam setup, marks entry, assessment structures, grade rules, result processing, and downloadable grade-sheet reporting without spreadsheet friction.",
+    body: "Handle exam setup, marks entry, assessment structures, grade rules, result processing, and downloadable grade-sheet reporting.",
     signals: ["Exam creation", "Marks entry", "Grade-sheet outputs"]
   },
   {
-    title: "Fee management and accounting support",
-    body: "Track fee plans, due visibility, payment status, and finance-oriented student records alongside academic operations.",
-    signals: ["Fee plans", "Payment visibility", "Finance-ready records"]
+    title: "Faculty workspace",
+    body: "Give faculty one clean layer for attendance, marks, exam setup, materials, and subject-level academic visibility.",
+    signals: ["Teaching workflows", "Academic uploads", "Subject analytics"]
   },
   {
-    title: "Library management",
-    body: "Bring catalog visibility, member access, circulation workflows, and issue-return records into the same campus system.",
-    signals: ["Catalog visibility", "Circulation workflows", "Borrower tracking"]
-  },
-  {
-    title: "Staff information and payroll",
-    body: "Maintain staff profiles, departments, designation visibility, and payroll-ready records for non-student institutional operations.",
-    signals: ["Staff master", "Payroll support", "Department mapping"]
-  },
-  {
-    title: "Inventory and campus resources",
-    body: "Track assets, inventory, lab resources, and institutional stock movement for cleaner administrative control.",
-    signals: ["Asset visibility", "Lab inventory", "Store tracking"]
-  },
-  {
-    title: "Bus transport and GPS operations",
-    body: "Support route visibility, transport administration, and campus commute oversight for institutions with mobility workflows.",
-    signals: ["Route management", "Transport records", "GPS-oriented oversight"]
+    title: "Student portal and mobile experience",
+    body: "Deliver attendance, marks, timetable, notices, mentor updates, and academic clarity through web and mobile touchpoints.",
+    signals: ["Student dashboard", "Mobile-ready", "Notification layer"]
   },
   {
     title: "Communication and notice orchestration",
-    body: "Send announcements, mentor messages, scheduled alerts, and role-targeted updates to students, faculty, and administration from one clean control layer.",
+    body: "Send announcements, mentor messages, scheduled alerts, and role-targeted updates to students, faculty, and administration from one control layer.",
     signals: ["Role targeting", "Scheduled notices", "Read tracking"]
   },
   {
-    title: "Leadership analytics",
+    title: "Analytics and institutional reporting",
     body: "Give HODs, registrars, and principals one view of attendance health, academic movement, at-risk cohorts, mentor effectiveness, and adoption across teams.",
-    signals: ["Department benchmarks", "Risk visibility", "Operational adoption"]
+    signals: ["Department benchmarks", "Risk visibility", "Leadership reporting"]
+  },
+  {
+    title: "TPO and placement operations",
+    body: "Support training coordination, placement communication, drive workflows, and employability tracking for final-year cohorts.",
+    signals: ["Drive communication", "Placement workflows", "TPO visibility"]
+  },
+  {
+    title: "Staff and administration management",
+    body: "Maintain staff records, internal coordination, and administrative visibility for institutional support operations.",
+    signals: ["Staff master", "Operational visibility", "Admin support"]
+  },
+  {
+    title: "Exports and scheduled reports",
+    body: "Generate reports, grade sheets, exports, and leadership-ready outputs for operational and academic review cycles.",
+    signals: ["CSV + PDF", "Scheduled reports", "Audit-ready outputs"]
   }
 ];
 
@@ -68,7 +78,7 @@ const lanes = [
   {
     label: "HeyAdmin",
     title: "Institution command center",
-    body: "Departments, courses, rules, reports, announcements, accounting support, and governance settings for central administration."
+    body: "Departments, courses, subjects, rules, reports, announcements, and governance settings for central administration."
   },
   {
     label: "HeyMentor",
@@ -83,13 +93,13 @@ const lanes = [
   {
     label: "HeyStudent",
     title: "Student experience layer",
-    body: "Attendance, marks, timetable, notices, fee visibility, and academic clarity in one portal and mobile experience."
+    body: "Attendance, marks, timetable, notices, mentor updates, and academic clarity in one portal and mobile experience."
   }
 ];
 
 const highlights = [
   { label: "Core suites", value: "7", helper: "Product lanes from HeyMentor to HeyStaff" },
-  { label: "Service coverage", value: "12 modules", helper: "Academic, admin, finance, staff, transport, and student workflows" },
+  { label: "University modules", value: "14", helper: "Academic, mentor, admin, student, TPO, and reporting workflows" },
   { label: "Weekly visibility", value: "18,460", helper: "Active students represented in leadership reporting" }
 ];
 
@@ -104,7 +114,7 @@ export default function FeaturesPage() {
               Every serious campus workflow, designed as one modern operating system.
             </h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-mist">
-              EasyCampus is built for institutions that want operational control, not scattered software. The platform combines registration, student lifecycle management, mentor visibility, attendance, fees, exams, library, transport, staff operations, communication, and analytics in one campus-grade layer.
+              EasyCampus is built for institutions that want operational control, not scattered software. The platform combines student lifecycle management, departments, courses, subjects, mentoring, attendance, examinations, communication, placements, analytics, and student experience in one campus-grade layer.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/request-demo" className="rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-white shadow-soft transition hover:bg-sky-600">
@@ -156,7 +166,7 @@ export default function FeaturesPage() {
           <div className="mb-8 max-w-3xl">
             <p className="section-kicker text-xs font-semibold text-brand">Module architecture</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
-              Twelve capability blocks that match how institutions actually operate.
+              Fourteen capability blocks that match how universities actually operate.
             </h2>
             <p className="mt-4 text-base leading-8 text-mist">
               Each module is designed to work alone or as part of the full ERP rollout, so institutions can start with their most urgent operational gap and expand without replatforming.
