@@ -3,46 +3,48 @@ import { DemoForm } from "@/components/marketing/demo-form";
 const demoTracks = [
   {
     title: "Admin workflows",
-    body: "Department setup, mentor assignment, student upload, rules, analytics, and reporting."
+    body: "Department setup, mentor assignment, student upload, rules, analytics, and board-level reporting."
   },
   {
     title: "Academic workflows",
-    body: "Attendance, marks entry, subject operations, course delivery, and faculty visibility."
+    body: "Attendance, marks entry, subject operations, exam setup, timetable flow, and faculty visibility."
   },
   {
     title: "Student experience",
-    body: "Portal, mobile app, announcements, mentor communication, and performance visibility."
+    body: "Portal, mobile app, announcements, mentor communication, and academic performance visibility."
   }
 ];
 
 export default function RequestDemoPage() {
   return (
-    <>
-      <section className="py-20">
-        <div className="shell grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
-            <span className="inline-flex rounded-full bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-700">
-              Request Demo
-            </span>
-            <h1 className="mt-5 text-5xl font-semibold tracking-tight text-ink">See EasyMentor ERP in action</h1>
-            <p className="mt-5 text-lg text-mist">
-              This page is now wired for the Vercel + Supabase MVP path. Submit the form and the lead can be stored directly in Supabase through a Next.js route handler.
-            </p>
+    <section className="py-20 lg:py-24">
+      <div className="shell grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
+        <div>
+          <span className="inline-flex rounded-full border border-brand/15 bg-white/80 px-4 py-2 text-xs font-semibold section-kicker text-brand shadow-soft">
+            Request Demo
+          </span>
+          <h1 className="mt-6 text-4xl font-semibold tracking-tight text-ink sm:text-5xl lg:text-6xl">
+            See EasyMentor ERP in a campus-ready walkthrough.
+          </h1>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-mist">
+            Tell us about your institution, rollout priorities, and operational pain points. We will show the exact admin, academic, and student workflows relevant to your campus.
+          </p>
 
-            <div className="mt-8 space-y-4">
-              {demoTracks.map((track) => (
-                <article key={track.title} className="glass rounded-3xl p-5">
-                  <h2 className="text-xl font-semibold text-ink">{track.title}</h2>
-                  <p className="mt-2 text-sm text-mist">{track.body}</p>
-                </article>
-              ))}
-            </div>
+          <div className="mt-8 space-y-4">
+            {demoTracks.map((track, index) => (
+              <article key={track.title} className="glass rounded-[30px] p-6">
+                <div className="flex items-center gap-3">
+                  <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-mist">0{index + 1}</span>
+                  <h2 className="text-lg font-semibold text-ink">{track.title}</h2>
+                </div>
+                <p className="mt-3 text-sm leading-7 text-mist">{track.body}</p>
+              </article>
+            ))}
           </div>
-
-          <DemoForm />
         </div>
-      </section>
-    </>
+
+        <DemoForm />
+      </div>
+    </section>
   );
 }
-

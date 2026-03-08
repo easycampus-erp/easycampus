@@ -6,14 +6,20 @@
   color-scheme: light;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
-  color: #152033;
+  font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  color: #132238;
   background:
-    radial-gradient(circle at top left, rgba(15, 111, 255, 0.16), transparent 28%),
-    radial-gradient(circle at top right, rgba(18, 185, 129, 0.12), transparent 24%),
-    linear-gradient(180deg, #fcfdff 0%, #f3f7fb 100%);
+    radial-gradient(circle at 8% 10%, rgba(15, 111, 255, 0.16), transparent 24%),
+    radial-gradient(circle at 92% 18%, rgba(18, 185, 129, 0.14), transparent 20%),
+    radial-gradient(circle at 50% 100%, rgba(255, 196, 74, 0.12), transparent 28%),
+    linear-gradient(180deg, #fbfdff 0%, #eef5fb 100%);
 }
 
 * {
@@ -31,14 +37,27 @@ a {
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  box-shadow: 0 24px 60px rgba(15, 40, 82, 0.12);
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  box-shadow: 0 24px 80px rgba(18, 38, 63, 0.12);
 }
 
 .gradient-panel {
-  background: linear-gradient(135deg, #0d1b35, #113468 60%, #0f6fff);
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.14), transparent 24%),
+    linear-gradient(135deg, #071a35 0%, #0f3770 52%, #0f6fff 100%);
   color: white;
 }
 
+.marketing-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.section-kicker {
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
