@@ -3,54 +3,66 @@ import { CtaBanner } from "@/components/marketing/cta-banner";
 
 const plans = [
   {
-    name: "Starter Campus",
-    fit: "For single-campus colleges replacing spreadsheets and disconnected portals",
-    price: "Custom MVP rollout",
+    name: "Lite Plan",
+    fit: "For institutions with student capacity up to 750",
+    price: "Rs. 0.5 / student / month",
     emphasis: false,
     features: [
-      "Student master, departments, courses, and subjects",
-      "Attendance workflows with role dashboards",
-      "Announcements, notices, and invite-based onboarding",
-      "Vercel + Supabase deployment path for fast go-live"
+      "Student information system and online registration",
+      "Attendance management and announcements",
+      "Basic academic and department operations",
+      "Fast launch path for smaller colleges and institutes"
     ]
   },
   {
-    name: "Growth Institution",
-    fit: "For institutions expanding into mentorship, exams, analytics, and controlled operations",
-    price: "Implementation quote",
+    name: "Plus Plan",
+    fit: "For institutions with student capacity up to 1000",
+    price: "Rs. 1 / student / month",
+    emphasis: false,
+    features: [
+      "Everything in Lite plus mentor workflows",
+      "Exam and result management",
+      "Role dashboards for admin, faculty, and students",
+      "Improved reporting and communication controls"
+    ]
+  },
+  {
+    name: "Pro Plan",
+    fit: "For institutions with student capacity up to 1250",
+    price: "Rs. 1.5 / student / month",
     emphasis: true,
     features: [
-      "Mentor management, meetings, and intervention tracking",
-      "Marks entry, exam setup, grade sheets, and reports",
-      "Leadership analytics across attendance and performance",
-      "Notifications, exports, rules, and academic governance"
+      "Everything in Plus plus advanced analytics",
+      "Staff information, payroll, and inventory support",
+      "Library, fee management, and governance workflows",
+      "Operational controls for fast-scaling institutions"
     ]
   },
   {
-    name: "Enterprise Multi-Campus",
-    fit: "For large university groups with cross-campus controls, leadership reporting, and policy complexity",
-    price: "Enterprise scope",
+    name: "Ultimate Plan",
+    fit: "For institutions with student capacity above 1250",
+    price: "Starts at Rs. 1.2 / student / month",
     emphasis: false,
     features: [
-      "Multi-campus rollout and leadership command views",
-      "Super-admin governance and audit visibility",
-      "Advanced implementation and data migration planning",
-      "Custom workflows, controls, and long-horizon adoption support"
+      "Enterprise rollout for large colleges and university groups",
+      "Transport, GPS, finance, and advanced administration layers",
+      "Multi-role reporting, exports, and process automation",
+      "Custom implementation and long-term scaling support"
     ]
   }
 ];
 
 const commitments = [
-  "Role-based dashboards for admin, faculty, mentor, staff, and student users",
-  "Modern cloud deployment with Supabase-backed data architecture",
-  "Onboarding, invite flows, exports, and operational reporting",
-  "Implementation-led configuration for academic rules and structures"
+  "Role-based dashboards for admin, faculty, mentor, staff, manager, TPO, and student users",
+  "Supabase-backed data architecture and Vercel-ready deployment",
+  "Onboarding, invite flows, exports, reports, and academic rules",
+  "Implementation-led configuration for institutional rollout"
 ];
 
 const pricingSignals = [
-  { label: "Deployment model", value: "SaaS + implementation", helper: "Priced around modules, user count, and rollout complexity" },
-  { label: "Go-live motion", value: "Phased", helper: "Start with a priority workflow, then expand module coverage" },
-  { label: "Institution fit", value: "Colleges to universities", helper: "Works for single-campus and multi-campus structures" }
+  { label: "Billing model", value: "Per student / month", helper: "Simple pricing aligned to active student capacity" },
+  { label: "Ideal for", value: "Institutes to universities", helper: "Works for colleges, campuses, and education groups" },
+  { label: "Rollout style", value: "Module-led", helper: "Start with essentials and expand into full ERP operations" }
 ];
 
 export default function PricingPage() {
@@ -61,10 +73,10 @@ export default function PricingPage() {
           <div className="glass rounded-[38px] p-8 lg:p-10">
             <p className="section-kicker text-xs font-semibold text-brand">Pricing</p>
             <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl lg:text-6xl">
-              Pricing built around campus scale, workflow depth, and rollout ambition.
+              Straightforward per-student pricing for institutions that want a cleaner operating system.
             </h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-mist">
-              EasyCampus is sold as an implementation-led university operating system. Institutions choose the rollout path that matches their academic complexity, governance model, and urgency to go live.
+              EasyCampus pricing is designed for colleges, institutes, and universities that want to start lean, digitize quickly, and expand into a complete ERP as operations mature.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/request-demo" className="rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-white shadow-soft transition hover:bg-sky-600">
@@ -80,10 +92,10 @@ export default function PricingPage() {
             <div className="flex items-center justify-between gap-4">
               <div>
                 <p className="section-kicker text-xs font-semibold text-white/70">Commercial model</p>
-                <h2 className="mt-3 text-3xl font-semibold text-white">Every plan is configured around your campus operating model.</h2>
+                <h2 className="mt-3 text-3xl font-semibold text-white">Choose the capacity band that matches your campus scale.</h2>
               </div>
               <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-sm font-semibold text-white/90">
-                No generic bundle pricing
+                Transparent student-based pricing
               </span>
             </div>
             <div className="mt-8 grid gap-4">
@@ -100,23 +112,23 @@ export default function PricingPage() {
       </section>
 
       <section className="py-6 lg:py-10">
-        <div className="shell grid gap-8 xl:grid-cols-[1.1fr_1.9fr]">
+        <div className="shell grid gap-8 xl:grid-cols-[1.02fr_1.98fr]">
           <div className="glass rounded-[32px] p-7">
             <p className="section-kicker text-xs font-semibold text-brand">Included in every rollout</p>
             <div className="mt-5 space-y-3">
               {commitments.map((item) => (
-                <div key={item} className="rounded-[22px] border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-ink">
+                <div key={item} className="rounded-[22px] border border-slate-200 bg-white px-4 py-3 text-sm font-medium leading-7 text-ink">
                   {item}
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="grid gap-5 xl:grid-cols-3">
+          <div className="grid gap-5 md:grid-cols-2">
             {plans.map((plan) => (
               <article key={plan.name} className={`rounded-[34px] p-7 shadow-soft ${plan.emphasis ? "gradient-panel" : "glass"}`}>
                 <p className={`section-kicker text-xs font-semibold ${plan.emphasis ? "text-white/70" : "text-brand"}`}>
-                  {plan.emphasis ? "Most requested" : "Rollout option"}
+                  {plan.emphasis ? "Best for growing campuses" : "Capacity plan"}
                 </p>
                 <h2 className={`mt-4 text-3xl font-semibold tracking-tight ${plan.emphasis ? "text-white" : "text-ink"}`}>{plan.name}</h2>
                 <p className={`mt-3 text-sm leading-7 ${plan.emphasis ? "text-white/80" : "text-mist"}`}>{plan.fit}</p>

@@ -6,6 +6,20 @@ import Link from "next/link";
 import { marketingNav } from "@easycampus/config";
 import { ProductMenu } from "@/components/marketing/product-menu";
 
+const serviceItems = [
+  "Online Registration",
+  "Student Information System",
+  "School Fee Management",
+  "Exam & Result Management",
+  "Library Management",
+  "Staff Information Management",
+  "School Financial Accounting",
+  "Staff Payroll Management",
+  "Inventory Management",
+  "Bus Transport & GPS",
+  "Attendance Management"
+];
+
 export function MarketingShell({ children }: { children: ReactNode }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -85,35 +99,40 @@ export function MarketingShell({ children }: { children: ReactNode }) {
 
       <footer className="pt-16 text-mist">
         <div className="shell glass rounded-[36px] px-8 py-10">
-          <div className="grid gap-8 md:grid-cols-[1.3fr_repeat(3,0.7fr)]">
+          <div className="grid gap-8 xl:grid-cols-[1fr_1fr_1.4fr]">
             <div>
               <h3 className="text-xl font-semibold text-ink">EasyCampus</h3>
               <p className="mt-3 max-w-sm text-sm leading-6">
                 AI-powered ERP for universities, colleges, and institutes that want operational clarity, student success visibility, and institutional scale.
               </p>
             </div>
+
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-mist">Platform</h4>
-              <div className="mt-4 space-y-2 text-sm">
-                <Link href="/features">Features</Link>
-                <Link href="/university-erp">University ERP</Link>
-                <Link href="/analytics">Analytics</Link>
+              <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-mist">Contact</h4>
+              <div className="mt-4 space-y-4 text-sm leading-7">
+                <div>
+                  <p className="font-semibold text-ink">Phone Number</p>
+                  <a href="tel:+91878020587" className="text-mist transition hover:text-brand">+91-8780 20587</a>
+                </div>
+                <div>
+                  <p className="font-semibold text-ink">Email</p>
+                  <a href="mailto:easycampus.erp@gmail.com" className="text-mist transition hover:text-brand">easycampus.erp@gmail.com</a>
+                </div>
+                <div>
+                  <p className="font-semibold text-ink">Location</p>
+                  <p>Ahmedabad GJ India - 380001</p>
+                </div>
               </div>
             </div>
+
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-mist">Resources</h4>
-              <div className="mt-4 space-y-2 text-sm">
-                <Link href="/blog">Blog</Link>
-                <Link href="/faq">FAQ</Link>
-                <Link href="/pricing">Pricing</Link>
-              </div>
-            </div>
-            <div>
-              <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-mist">Actions</h4>
-              <div className="mt-4 space-y-2 text-sm">
-                <Link href="/contact">Contact</Link>
-                <Link href="/request-demo">Book a demo</Link>
-                <Link href="/login">Sign in</Link>
+              <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-mist">Our Services</h4>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {serviceItems.map((item) => (
+                  <span key={item} className="rounded-full border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-ink shadow-soft">
+                    {item}
+                  </span>
+                ))}
               </div>
             </div>
           </div>

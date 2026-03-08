@@ -3,8 +3,13 @@ import { CtaBanner } from "@/components/marketing/cta-banner";
 
 const modules = [
   {
-    title: "Student lifecycle command",
-    body: "Manage admissions-ready records, enrollment, semester progression, guardian visibility, compliance details, and academic standing from one source of truth.",
+    title: "Online registration and admissions",
+    body: "Collect registration data, manage intake workflows, and move new students into the ERP without manual re-entry.",
+    signals: ["Digital registration", "Admissions-ready forms", "Enrollment handoff"]
+  },
+  {
+    title: "Student information system",
+    body: "Manage lifecycle records, profiles, semesters, guardians, departments, batches, and academic status from one source of truth.",
     signals: ["Admissions to graduation", "Unified student master", "Role-aware access"]
   },
   {
@@ -23,6 +28,31 @@ const modules = [
     signals: ["Exam creation", "Marks entry", "Grade-sheet outputs"]
   },
   {
+    title: "Fee management and accounting support",
+    body: "Track fee plans, due visibility, payment status, and finance-oriented student records alongside academic operations.",
+    signals: ["Fee plans", "Payment visibility", "Finance-ready records"]
+  },
+  {
+    title: "Library management",
+    body: "Bring catalog visibility, member access, circulation workflows, and issue-return records into the same campus system.",
+    signals: ["Catalog visibility", "Circulation workflows", "Borrower tracking"]
+  },
+  {
+    title: "Staff information and payroll",
+    body: "Maintain staff profiles, departments, designation visibility, and payroll-ready records for non-student institutional operations.",
+    signals: ["Staff master", "Payroll support", "Department mapping"]
+  },
+  {
+    title: "Inventory and campus resources",
+    body: "Track assets, inventory, lab resources, and institutional stock movement for cleaner administrative control.",
+    signals: ["Asset visibility", "Lab inventory", "Store tracking"]
+  },
+  {
+    title: "Bus transport and GPS operations",
+    body: "Support route visibility, transport administration, and campus commute oversight for institutions with mobility workflows.",
+    signals: ["Route management", "Transport records", "GPS-oriented oversight"]
+  },
+  {
     title: "Communication and notice orchestration",
     body: "Send announcements, mentor messages, scheduled alerts, and role-targeted updates to students, faculty, and administration from one clean control layer.",
     signals: ["Role targeting", "Scheduled notices", "Read tracking"]
@@ -38,7 +68,7 @@ const lanes = [
   {
     label: "HeyAdmin",
     title: "Institution command center",
-    body: "Departments, courses, rules, reports, announcements, and governance settings for central administration."
+    body: "Departments, courses, rules, reports, announcements, accounting support, and governance settings for central administration."
   },
   {
     label: "HeyMentor",
@@ -53,13 +83,13 @@ const lanes = [
   {
     label: "HeyStudent",
     title: "Student experience layer",
-    body: "Attendance, marks, timetable, messages, notices, and academic clarity in one portal and mobile experience."
+    body: "Attendance, marks, timetable, notices, fee visibility, and academic clarity in one portal and mobile experience."
   }
 ];
 
 const highlights = [
   { label: "Core suites", value: "7", helper: "Product lanes from HeyMentor to HeyStaff" },
-  { label: "Operational coverage", value: "42 depts", helper: "Modelled around multi-department academic institutions" },
+  { label: "Service coverage", value: "12 modules", helper: "Academic, admin, finance, staff, transport, and student workflows" },
   { label: "Weekly visibility", value: "18,460", helper: "Active students represented in leadership reporting" }
 ];
 
@@ -74,7 +104,7 @@ export default function FeaturesPage() {
               Every serious campus workflow, designed as one modern operating system.
             </h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-mist">
-              EasyCampus is built for institutions that want operational control, not scattered software. The platform combines student lifecycle management, mentor visibility, attendance, marks, communication, and analytics in one campus-grade layer.
+              EasyCampus is built for institutions that want operational control, not scattered software. The platform combines registration, student lifecycle management, mentor visibility, attendance, fees, exams, library, transport, staff operations, communication, and analytics in one campus-grade layer.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/request-demo" className="rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-white shadow-soft transition hover:bg-sky-600">
@@ -126,7 +156,7 @@ export default function FeaturesPage() {
           <div className="mb-8 max-w-3xl">
             <p className="section-kicker text-xs font-semibold text-brand">Module architecture</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
-              Six core capability blocks that match how universities actually operate.
+              Twelve capability blocks that match how institutions actually operate.
             </h2>
             <p className="mt-4 text-base leading-8 text-mist">
               Each module is designed to work alone or as part of the full ERP rollout, so institutions can start with their most urgent operational gap and expand without replatforming.

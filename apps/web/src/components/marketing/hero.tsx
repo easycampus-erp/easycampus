@@ -7,12 +7,35 @@ const operationalSignals = [
   "Marks, exams, and analytics"
 ];
 
+const executiveStats = [
+  {
+    label: "Attendance Health",
+    value: "93.4%",
+    helper: "Across 42 departments and 18,460 active students"
+  },
+  {
+    label: "At-Risk Students",
+    value: "284",
+    helper: "Mentor follow-up and defaulter workflows triggered"
+  },
+  {
+    label: "Mentor Coverage",
+    value: "486 pods",
+    helper: "Structured support across year, section, and risk bands"
+  },
+  {
+    label: "Faculty Adoption",
+    value: "1,260",
+    helper: "Teaching and admin users active in weekly workflows"
+  }
+];
+
 export function Hero() {
   return (
     <section className="relative overflow-hidden py-20 lg:py-28">
       <div className="shell grid items-center gap-10 lg:grid-cols-[1.08fr_0.92fr]">
         <div>
-          <span className="inline-flex rounded-full border border-brand/15 bg-white/80 px-4 py-2 text-xs font-semibold section-kicker text-brand shadow-soft">
+          <span className="section-kicker inline-flex rounded-full border border-brand/15 bg-white/80 px-4 py-2 text-xs font-semibold text-brand shadow-soft">
             AI Powered ERP for Smart Universities
           </span>
           <h1 className="mt-6 max-w-5xl text-5xl font-semibold leading-[1.02] tracking-tight text-ink sm:text-6xl xl:text-7xl">
@@ -49,43 +72,36 @@ export function Hero() {
         </div>
 
         <div className="relative">
-          <div className="gradient-panel marketing-grid rounded-[40px] p-7 shadow-soft lg:p-8">
-            <div className="flex items-center justify-between gap-4">
+          <div className="gradient-panel marketing-grid overflow-hidden rounded-[40px] p-7 shadow-soft lg:p-8">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.16),transparent_34%),linear-gradient(180deg,rgba(3,7,18,0.10),rgba(3,7,18,0.22))]" />
+
+            <div className="relative z-10 flex items-center justify-between gap-4">
               <div>
-                <p className="text-sm uppercase tracking-[0.2em] text-white/65">Executive Snapshot</p>
-                <h2 className="mt-2 text-2xl font-semibold">One view for academics, operations, and student support</h2>
+                <p className="text-sm uppercase tracking-[0.2em] text-white/70">Executive Snapshot</p>
+                <h2 className="mt-2 max-w-md text-2xl font-semibold leading-tight text-white">
+                  One view for academics, operations, and student support
+                </h2>
               </div>
-              <span className="rounded-full border border-cyan-200/40 bg-cyan-300/15 px-3 py-1 text-sm font-semibold text-white shadow-[0_8px_24px_rgba(6,182,212,0.18)]">AI insights live</span>
+              <span className="rounded-full border border-cyan-200/50 bg-slate-950/20 px-3 py-1 text-sm font-semibold text-cyan-50 shadow-[0_8px_24px_rgba(6,182,212,0.18)] backdrop-blur">
+                AI insights live
+              </span>
             </div>
 
-            <div className="mt-5 inline-flex rounded-full border border-amber-200/45 bg-amber-300/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-amber-50 shadow-[0_10px_24px_rgba(245,158,11,0.18)]">
+            <div className="relative z-10 mt-5 inline-flex rounded-full border border-amber-200/55 bg-slate-950/18 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-amber-50 shadow-[0_10px_24px_rgba(245,158,11,0.18)] backdrop-blur">
               Multi-role campus visibility
             </div>
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-[28px] bg-white/10 p-5 backdrop-blur">
-                <p className="text-sm text-white/70">Attendance Health</p>
-                <p className="mt-3 text-3xl font-semibold">93.4%</p>
-                <p className="mt-2 text-sm text-white/70">Across 42 departments and 18,460 active students</p>
-              </div>
-              <div className="rounded-[28px] bg-white/10 p-5 backdrop-blur">
-                <p className="text-sm text-white/70">At-Risk Students</p>
-                <p className="mt-3 text-3xl font-semibold">284</p>
-                <p className="mt-2 text-sm text-white/70">Mentor follow-up and defaulter workflows triggered</p>
-              </div>
-              <div className="rounded-[28px] bg-white/10 p-5 backdrop-blur">
-                <p className="text-sm text-white/70">Mentor Coverage</p>
-                <p className="mt-3 text-3xl font-semibold">486 pods</p>
-                <p className="mt-2 text-sm text-white/70">Structured student support across year, section, and risk bands</p>
-              </div>
-              <div className="rounded-[28px] bg-white/10 p-5 backdrop-blur">
-                <p className="text-sm text-white/70">Faculty Adoption</p>
-                <p className="mt-3 text-3xl font-semibold">1,260</p>
-                <p className="mt-2 text-sm text-white/70">Teaching and admin users active in weekly workflows</p>
-              </div>
+            <div className="relative z-10 mt-8 grid gap-4 sm:grid-cols-2">
+              {executiveStats.map((stat) => (
+                <div key={stat.label} className="rounded-[28px] border border-white/18 bg-slate-950/24 p-5 shadow-[0_20px_50px_rgba(15,23,42,0.18)] backdrop-blur-md">
+                  <p className="text-sm font-medium text-white/78">{stat.label}</p>
+                  <p className="mt-3 text-3xl font-semibold tracking-tight text-white">{stat.value}</p>
+                  <p className="mt-2 text-sm leading-7 text-slate-100/78">{stat.helper}</p>
+                </div>
+              ))}
             </div>
 
-            <div className="mt-8 rounded-[32px] bg-white p-5 text-ink">
+            <div className="relative z-10 mt-8 rounded-[32px] border border-white/50 bg-white/96 p-5 text-ink shadow-[0_24px_70px_rgba(15,23,42,0.14)]">
               <div className="flex items-center justify-between text-sm text-mist">
                 <span>Weekly academic momentum</span>
                 <span>Live operational signal</span>
