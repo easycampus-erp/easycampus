@@ -1,13 +1,25 @@
+"use client";
+
 import type { ReactNode } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { marketingNav } from "@easycampus/config";
 import { ProductMenu } from "@/components/marketing/product-menu";
 
 export function MarketingShell({ children }: { children: ReactNode }) {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   return (
     <div className="pb-10">
-      <header className="sticky top-0 z-30 border-b border-white/50 bg-white/72 backdrop-blur-2xl">
-        <div className="shell flex flex-wrap items-center justify-between gap-5 py-4">
+      <div className="border-b border-slate-200/60 bg-[#f7fbff]">
+        <div className="shell flex flex-wrap items-center justify-between gap-3 py-3 text-xs font-medium uppercase tracking-[0.16em] text-mist">
+          <span>Smart University Operating System</span>
+          <span className="rounded-full bg-white px-3 py-1 text-[11px] text-brand shadow-soft">AI-powered academic operations</span>
+        </div>
+      </div>
+
+      <header className="sticky top-0 z-30 border-b border-white/50 bg-white/78 backdrop-blur-2xl">
+        <div className="shell flex items-center justify-between gap-5 py-4">
           <Link href="/" className="flex items-center gap-4">
             <span className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-brand via-sky-400 to-cyan-300 text-lg font-semibold text-white shadow-soft">
               EC
@@ -18,7 +30,7 @@ export function MarketingShell({ children }: { children: ReactNode }) {
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-6 text-sm font-medium text-mist lg:flex">
+          <nav className="hidden items-center gap-6 text-sm font-medium text-mist xl:flex">
             <ProductMenu />
             {marketingNav.map((item) => (
               <Link key={item.href} href={item.href} className="transition hover:text-ink">
@@ -27,10 +39,7 @@ export function MarketingShell({ children }: { children: ReactNode }) {
             ))}
           </nav>
 
-          <div className="flex flex-wrap gap-3">
-            <div className="lg:hidden">
-              <ProductMenu />
-            </div>
+          <div className="hidden items-center gap-3 lg:flex">
             <Link href="/features" className="rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-ink transition hover:border-brand/30 hover:text-brand">
               Explore Platform
             </Link>
@@ -38,9 +47,42 @@ export function MarketingShell({ children }: { children: ReactNode }) {
               Request Demo
             </Link>
           </div>
+
+          <button
+            type="button"
+            onClick={() => setMobileOpen((current) => !current)}
+            className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-ink lg:hidden"
+          >
+            Menu
+          </button>
         </div>
+
+        {mobileOpen ? (
+          <div className="border-t border-slate-200/70 bg-white lg:hidden">
+            <div className="shell space-y-4 py-5">
+              <ProductMenu />
+              <div className="grid gap-3">
+                {marketingNav.map((item) => (
+                  <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="rounded-2xl bg-slate-50 px-4 py-3 text-sm font-medium text-ink">
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2">
+                <Link href="/features" onClick={() => setMobileOpen(false)} className="rounded-full border border-slate-200 bg-white px-5 py-3 text-center text-sm font-semibold text-ink">
+                  Explore Platform
+                </Link>
+                <Link href="/request-demo" onClick={() => setMobileOpen(false)} className="rounded-full bg-brand px-5 py-3 text-center text-sm font-semibold text-white shadow-soft">
+                  Request Demo
+                </Link>
+              </div>
+            </div>
+          </div>
+        ) : null}
       </header>
+
       {children}
+
       <footer className="pt-16 text-mist">
         <div className="shell glass rounded-[36px] px-8 py-10">
           <div className="grid gap-8 md:grid-cols-[1.3fr_repeat(3,0.7fr)]">

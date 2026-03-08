@@ -26,10 +26,28 @@ const benefitItems = [
   { title: "Scales with the institution", body: "Start with one campus and grow into multi-department or multi-campus operations without changing systems." }
 ];
 
+const roleHighlights = [
+  { title: "Admin teams", body: "Own structures, governance, announcements, exports, and reporting from one command layer." },
+  { title: "Faculty", body: "Capture attendance, upload marks, manage exams, and see subject-level student progress." },
+  { title: "Mentors", body: "Track student groups, risks, meetings, and interventions with cleaner follow-through." },
+  { title: "Students", body: "Access marks, timetable, attendance, messages, and notifications from one simple workspace." }
+];
+
 export default function HomePage() {
   return (
     <>
       <Hero />
+      <section className="py-6 lg:py-10">
+        <div className="shell grid gap-5 lg:grid-cols-4">
+          {roleHighlights.map((item) => (
+            <article key={item.title} className="glass rounded-[28px] p-6">
+              <p className="section-kicker text-[11px] font-semibold text-brand">Campus role</p>
+              <h2 className="mt-3 text-xl font-semibold text-ink">{item.title}</h2>
+              <p className="mt-3 text-sm leading-7 text-mist">{item.body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
       <FeatureSection title="Universities deserve better than disconnected systems" description="EasyCampus replaces fragmented portals and spreadsheet-heavy workflows with one intelligent operating system for academic operations." items={problemItems} />
       <FeatureSection title="Core modules built for the academic ecosystem" description="Every major workflow is designed for administrators, faculty, mentors, students, and leadership teams." items={moduleItems} />
       <FeatureSection title="Why institutions choose EasyCampus" description="The goal is not just digitization. It is control, speed, visibility, and stronger student outcomes." items={benefitItems} />

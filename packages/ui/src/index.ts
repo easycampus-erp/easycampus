@@ -5,10 +5,8 @@ export function cn(...parts: Array<string | false | null | undefined>) {
 }
 
 export const sampleKpis: KpiCard[] = [
-  { label: "Total Students", value: "24,880", helper: "Across all departments" },
-  { label: "Attendance", value: "91.8%", helper: "Institution average" },
-  { label: "Defaulters", value: "128", helper: "Need immediate action" },
-  { label: "Mentor Groups", value: "312", helper: "Active this semester" }
+  { label: "Active Students", value: "18,460", helper: "Across UG, PG, and diploma cohorts" },
+  { label: "Attendance Health", value: "93.4%", helper: "Institution-wide weekly average" },
+  { label: "At-Risk Students", value: "284", helper: "Flagged for academic or attendance follow-up" },
+  { label: "Mentor Pods", value: "486", helper: "Live groups running this semester" }
 ];
-
-
