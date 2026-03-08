@@ -1,4 +1,4 @@
-import type { KpiCard } from "@easycampus/types";
+import type { KpiCard } from "../../types/src";
 
 export function cn(...parts: Array<string | false | null | undefined>) {
   return parts.filter(Boolean).join(" ");
@@ -10,4 +10,5 @@ export const sampleKpis: KpiCard[] = [
   { label: "Defaulters", value: "128", helper: "Need immediate action" },
   { label: "Mentor Groups", value: "312", helper: "Active this semester" }
 ];
+
 

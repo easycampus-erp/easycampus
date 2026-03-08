@@ -1,4 +1,4 @@
-import type { Role } from "@easycampus/types";
+import type { Role } from "../../types/src";
 
 export const marketingNav = [
   { href: "/", label: "Home" },
@@ -17,4 +17,5 @@ export const dashboardRoles: { href: string; label: string; role: Role }[] = [
   { href: "/mentor", label: "Mentor", role: "mentor" },
   { href: "/student", label: "Student", role: "student" }
 ];
+
 
