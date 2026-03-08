@@ -61,3 +61,31 @@ a {
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0) scale(1.02);
+  }
+}
+
+@keyframes float-delay {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, 10px, 0) rotate(4deg);
+  }
+}
+
+.float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+.float-delay {
+  animation: float-delay 8s ease-in-out infinite;
+}
