@@ -1,35 +1,34 @@
 {
-  "name": "@easycampus/web",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "tsc --noEmit",
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@easycampus/config": "workspace:*",
-    "@supabase/ssr": "^0.5.2",
-    "@easycampus/types": "workspace:*",
-    "@easycampus/ui": "workspace:*",
-    "pdf-lib": "^1.17.1",
-    "@supabase/supabase-js": "^2.49.8",
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "zod": "^3.24.2"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "latest",
-    "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "autoprefixer": "latest",
-    "postcss": "latest",
-    "tailwindcss": "latest",
-    "typescript": "latest"
-  }
+    "name":  "@easycampus/web",
+    "version":  "0.1.0",
+    "private":  true,
+    "scripts":  {
+                    "dev":  "next dev",
+                    "build":  "next build",
+                    "start":  "next start",
+                    "lint":  "tsc --noEmit",
+                    "typecheck":  "tsc --noEmit"
+                },
+    "dependencies":  {
+                         "@easycampus/config":  "file:../../packages/config",
+                         "@supabase/ssr":  "^0.5.2",
+                         "@easycampus/types":  "file:../../packages/types",
+                         "@easycampus/ui":  "file:../../packages/ui",
+                         "pdf-lib":  "^1.17.1",
+                         "@supabase/supabase-js":  "^2.49.8",
+                         "next":  "latest",
+                         "react":  "latest",
+                         "react-dom":  "latest",
+                         "zod":  "^3.24.2"
+                     },
+    "devDependencies":  {
+                            "@tailwindcss/postcss":  "latest",
+                            "@types/node":  "latest",
+                            "@types/react":  "latest",
+                            "@types/react-dom":  "latest",
+                            "autoprefixer":  "latest",
+                            "postcss":  "latest",
+                            "tailwindcss":  "latest",
+                            "typescript":  "latest"
+                        }
 }
-
